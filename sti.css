@@ -1,0 +1,193 @@
+:root {
+    --primario: rgba(216, 0, 1, 1);     /* Rojo Wilder */
+    --primario-hover: rgba(180, 0, 0, 1);
+    --oscuro-puro: #000000;             /* Negro */
+    --oscuro-suave: #121212;            /* Negro para secciones */
+    --blanco: #ffffff;
+    --gris-claro: #f5f5f5;
+    --gris-borde: #eeeeee;
+    --texto-oscuro: #1a1a1a;
+    --texto-gris: #666666;
+    --font-titulo: 'Bebas Neue', sans-serif;
+    --font-cuerpo: 'Nunito', sans-serif;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --shadow-strong: 0 15px 40px rgba(216, 0, 1, 0.15);
+}
+/* =========================================
+   BANNER DE PÁGINAS SECUNDARIAS
+   ========================================= */
+.page-banner {
+    background: var(--oscuro-puro);
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Línea roja decorativa debajo del banner */
+.page-banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--primario);
+}
+
+.page-banner h2 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: var(--blanco);
+    margin-bottom: 10px;
+}
+
+.page-banner h2 span {
+    color: var(--primario);
+}
+
+.page-banner p {
+    font-family: var(--font-cuerpo);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* =========================================
+   SECCIÓN EQUIPO (GRID Y TARJETAS)
+   ========================================= */
+.equipo-seccion {
+    padding: 100px 20px 150px; /* Mucho padding abajo para evitar que se vea cortado */
+    background: var(--gris-claro); /* Fondo gris claro para que las tarjetas blancas resalten */
+}
+
+.equipo-grid {
+    display: grid;
+    /* Esto hace que las tarjetas se adapten automáticamente al ancho */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.equipo-card {
+    background: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); /* Sombra muy suave por defecto */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Efecto al pasar el mouse por encima de la tarjeta */
+.equipo-card:hover {
+    border-color: var(--primario);
+    box-shadow: var(--shadow-strong);
+    transform: translateY(-10px);
+}
+
+/* Círculo contenedor de la imagen */
+.equipo-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 25px auto;
+    border-radius: 50%; /* Imágenes redondas para contrastar con las tarjetas cuadradas */
+    overflow: hidden;
+    background: var(--gris-claro);
+    border: 4px solid var(--gris-borde);
+    transition: all 0.4s ease;
+}
+
+.equipo-card:hover .equipo-img {
+    border-color: var(--primario);
+}
+
+.equipo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.equipo-card:hover .equipo-img img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.equipo-card h3 {
+    font-family: var(--font-titulo);
+    font-size: 2rem;
+    color: var(--oscuro-puro);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.equipo-card p {
+    color: var(--texto-oscuro);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Etiqueta roja pequeña indicando el número de integrante */
+.equipo-rol {
+    display: inline-block;
+    background: var(--primario);
+    color: var(--blanco);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    letter-spacing: 1px;
+}
+/* =========================================
+    HEADER
+   ========================================= */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background: var(--blanco);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(252, 252, 252, 0.05);
+}
+
+.header__logo img {
+    height: 55px;
+    width: auto;
+}
+
+.header__nav {
+    display: flex;
+    gap: 25px;
+}
+
+.header__nav a {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: var(--oscuro-puro);
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.footer {
+    background: var(--oscuro-puro);
+    color: var(--blanco);
+    padding: 90px 50px 0;
+}
+
+
+
+.footer__copy {
+    margin-top: 80px;
+    border-top: 1px solid #1a1a1a;
+    padding: 30px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #444;
+}

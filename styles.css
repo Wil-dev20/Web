@@ -371,6 +371,106 @@ h2 {
 }
 
 /* =========================================
+   SECCIÓN DE CONTACTO
+   ========================================= */
+.contacto-seccion {
+    padding: 4rem 1rem;
+    background-color: #f4f4f4; /* Fondo sutilmente gris para separar del mapa */
+    text-align: center;
+}
+
+.contacto-seccion h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #222;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto; /* Centra el formulario en la pantalla */
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Sombra elegante para dar profundidad */
+    text-align: left; /* Los labels deben ir alineados a la izquierda */
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Evita que el padding haga desbordar los inputs */
+}
+
+/* Efecto visual al hacer clic en los inputs */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #222; /* Borde oscuro al seleccionar */
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.1); /* Resplandor suave */
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite agrandar el textarea solo hacia abajo */
+    min-height: 100px;
+}
+
+/* Botón de Enviar específico para el formulario */
+.form-container .btn {
+    width: 100%;
+    display: block;
+    padding: 1rem;
+    background-color: #222; /* Color principal oscuro */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 1rem;
+}
+
+.form-container .btn:hover {
+    background-color: #444; /* Aclara un poco al pasar el mouse */
+}
+
+.form-container .btn:active {
+    transform: scale(0.98); /* Efecto de "presionado" al hacer clic */
+}
+
+/* Contenedor del mensaje de validación de JS */
+.form-msg {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem;
+}
+
+/* =========================================
 RESPONSIVO
    ========================================= */
 @media (max-width: 768px) {
