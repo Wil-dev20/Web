@@ -1,6 +1,4 @@
-/* =========================================
-    VARIABLES - PALETA PROFESIONAL
-   ========================================= */
+
 :root {
     --primario: rgba(216, 0, 1, 1);     /* Rojo Wilder */
     --primario-hover: rgba(180, 0, 0, 1);
@@ -17,9 +15,7 @@
     --shadow-strong: 0 15px 40px rgba(216, 0, 1, 0.15);
 }
 
-/* =========================================
-    RESET & BASE
-   ========================================= */
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -43,7 +39,7 @@ a {
 }
 
 img {
-    max-width: 100%;
+    max-width: 200%;
     display: block;
 }
 
@@ -74,10 +70,9 @@ h2 {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(252, 252, 252, 0.05);
 }
 
-/* Estilo para el logo reemplazando el placeholder */
 .header__logo img {
     height: 55px;
     width: auto;
@@ -101,9 +96,7 @@ h2 {
     color: var(--primario);
 }
 
-/* =========================================
-    HERO SECTION
-   ========================================= */
+
 .hero {
     height: 80vh;
     background: var(--oscuro-puro);
@@ -114,7 +107,6 @@ h2 {
     overflow: hidden;
 }
 
-/* Decoración geométrica de fondo */
 .hero::after {
     content: '';
     position: absolute;
@@ -379,7 +371,7 @@ h2 {
 }
 
 /* =========================================
-    RESPONSIVE
+RESPONSIVO
    ========================================= */
 @media (max-width: 768px) {
     .header {
